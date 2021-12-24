@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1456.0, 466.0, 640.0, 480.0 ],
+		"rect" : [ 1712.0, 416.0, 1128.0, 630.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,81 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"decodemode" : 1,
+					"id" : "obj-10",
+					"maxclass" : "live.drop",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 263.0, 62.0, 140.0, 60.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 118.0, 11.333334356546402, 104.0, 50.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_invisible" : 1,
+							"parameter_longname" : "live.drop",
+							"parameter_shortname" : "live.drop",
+							"parameter_type" : 4
+						}
+
+					}
+,
+					"varname" : "live.drop"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 263.0, 171.000000923871994, 83.0, 22.0 ],
+					"text" : "prepend open"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "bang" ],
+					"patching_rect" : [ 263.0, 211.0, 47.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"basictuning" : 440,
+						"followglobaltempo" : 0,
+						"formantcorrection" : 0,
+						"mode" : "basic",
+						"originallength" : [ 0.0, "ticks" ],
+						"originaltempo" : 120.0,
+						"pitchcorrection" : 0,
+						"quality" : "basic",
+						"timestretch" : [ 0 ]
+					}
+,
+					"text" : "sfplay~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "playbar",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "int" ],
+					"patching_rect" : [ 359.0, 174.000000923871994, 284.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 8.0, 75.000000923871994, 214.0, 24.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-16",
 					"maxclass" : "newobj",
@@ -116,7 +191,7 @@
 					"outlettype" : [ "float" ],
 					"patching_rect" : [ 198.166662782430649, 296.666672170162201, 80.0, 13.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 74.666672170162201, 409.666662782430649, 19.0 ]
+					"presentation_rect" : [ 8.0, 104.666672170162201, 214.0, 19.0 ]
 				}
 
 			}
@@ -129,46 +204,6 @@
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 141.666662782430649, 238.666670799255371, 68.0, 22.0 ],
 					"text" : "selector~ 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"basictuning" : 440,
-					"clipheight" : 43.5,
-					"data" : 					{
-						"clips" : [ 							{
-								"absolutepath" : "Lowell Liebermann - Soliloquy for Flute, Op. 44 (1993).mp3",
-								"filename" : "Lowell Liebermann - Soliloquy for Flute, Op. 44 (1993).mp3",
-								"filekind" : "audiofile",
-								"id" : "u412000656",
-								"selection" : [ 0.119341563786008, 0.502057613168724 ],
-								"loop" : 1,
-								"content_state" : 								{
-									"loop" : 1
-								}
-
-							}
- ]
-					}
-,
-					"followglobaltempo" : 0,
-					"formantcorrection" : 0,
-					"id" : "obj-8",
-					"maxclass" : "playlist~",
-					"mode" : "basic",
-					"numinlets" : 1,
-					"numoutlets" : 5,
-					"originallength" : [ 0.0, "ticks" ],
-					"originaltempo" : 120.0,
-					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 243.166662782430649, 114.666665583848953, 298.5, 44.5 ],
-					"pitchcorrection" : 0,
-					"presentation" : 1,
-					"presentation_rect" : [ 119.166662782430649, 15.750000923871994, 298.5, 44.5 ],
-					"quality" : "basic",
-					"timestretch" : [ 0 ]
 				}
 
 			}
@@ -207,6 +242,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"source" : [ "obj-16", 0 ]
 				}
@@ -230,6 +272,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
@@ -238,19 +287,28 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 2 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "Lowell Liebermann - Soliloquy for Flute, Op. 44 (1993).mp3",
-				"bootpath" : "~/Desktop/Flute_LiveElectronics_Study/media",
-				"patcherrelativepath" : "../media",
-				"type" : "Mp3",
-				"implicit" : 1
+		"parameters" : 		{
+			"obj-10" : [ "live.drop", "live.drop", 0 ],
+			"parameterbanks" : 			{
+
 			}
- ],
+,
+			"inherited_shortname" : 1
+		}
+,
+		"dependency_cache" : [  ],
 		"autosave" : 0
 	}
 
