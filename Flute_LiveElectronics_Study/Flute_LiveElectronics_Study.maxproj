@@ -2,8 +2,8 @@
 	"name" : "Flute_LiveElectronics_Study",
 	"version" : 1,
 	"creationdate" : 3722601781,
-	"modificationdate" : 3723208466,
-	"viewrect" : [ 1696.0, 377.0, 300.0, 448.0 ],
+	"modificationdate" : 3723812504,
+	"viewrect" : [ 880.0, 264.0, 300.0, 448.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -28,6 +28,21 @@
 ,
 			"slapback~.maxpat" : 			{
 				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"basic_delay~.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"note_length_in_ms.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"note_length_in_ms.maxhelp" : 			{
+				"kind" : "helpfile",
 				"local" : 1
 			}
 
